@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to Tasty Treats</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@700&family=Montserrat:wght@300&family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="content">
+        <div class="logo">
+          <img src="images/foodlogoo.png" alt="Food logo" />
+          <a href="/">Tasty Treats</a>
+        </div>
+        <ul class="menu-list">
+          <div class="icon cancel-btn">
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="menu.html" target="_blank">Menu</a></li>
+          <li><a href="order.html">Order Now</a></li>
+          <li><a href="contacts.html">Contacts</a></li>
+          <li><a href="#" onclick="openPopup()">Invite a Friend</a></li>
+          <div class="popup" id="popup" >
+            <img src="images/404-tick.png">
+            <h2>Hello&#128512</h2>
+            <p>Invite all your friends now .<br> The link is below &#8595</p>
+            <button type="button" onclick="closePopup()">Invite</button>
+        </div>
+        </ul>
+        <div class="icon menu-btn">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+      <script>
+        let popup = document.getElementById("popup");
+      
+        const menu = document.querySelector(".menu-list");
+        const body = document.querySelector("body");
+        const navbar = document.querySelector(".navbar");
+        const menuBtn = document.querySelector(".menu-btn");
+        const cancelBtn = document.querySelector(".cancel-btn");
+
+        menuBtn.onclick = () => {
+          menu.classList.add("active");
+          menuBtn.classList.add("hide");
+          body.classList.add("disabledScroll");
+        };
+        cancelBtn.onclick = () => {
+          menu.classList.remove("active");
+          menuBtn.classList.remove("hide");
+          body.classList.remove("disabledScroll");
+        };
+        function openPopup(){
+            popup.classList.add("open-popup");
+        }
+        function closePopup(){
+            popup.classList.remove("open-popup");
+        }
+      </script>
+    </nav>
+    <section class="preview">
+      <div class="heading">
+        <h2>EXPERIENCE A WORLD OF FLAVORS:</h2>
+        <h2>DISCOVER TASTY TREATS PARADISE!</h2>
+      </div>
+      <div class="text">
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet commodi, sint voluptate adipisci voluptates dignissimos veniam nihil qui ab.
+        </p>
+        <a href="/">ORDER NOW</a>
+      </div>
+    </section>
+    <section class="foods">
+      <div class="text">
+        <h2>Our Top Rated Dishes!</h2>
+        <span>Lorem doloribus atque voluptatibus. Optio quo unde.</span>
+        <span>xcepturi inventore suscipit, voluptates a nobis.</span>
+      </div>
+      <div class="cells">
+        <div class="cell">
+          <img src="images/pasta.jpeg" alt="Pasta" />
+          <span>Pasta</span>
+          <span>$1.99</span>
+          <a href="/">ADD TO CART</a>
+        </div>
+        <div class="cell">
+          <img src="images/sub.jpg" alt="Ugali" />
+          <span>Chicken Sub</span>
+          <span>$3.99</span>
+          <a href="/">ADD TO CART</a>
+        </div>
+        <div class="cell">
+          <img src="images/wali.jpeg" alt="Wali" />
+          <span>Wali Makange</span>
+          <span>$2.99</span>
+          <a href="/">ADD TO CART</a>
+        </div>
+        <div class="cell">
+          <img src="images/chicken.jpg" alt="Fried chicken" />
+          <span>Fried Chicken</span>
+          <span>$9.99</span>
+          <a href="/">ADD TO CART</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col">
+            <h4>company</h4>
+            <ul>
+              <li><a href="#">about us</a></li>
+              <li><a href="#">our services</a></li>
+              <li><a href="#">privacy policy</a></li>
+              <li><a href="#">affiliate programs</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>get help</h4>
+            <ul>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">shipping</a></li>
+              <li><a href="#">returns</a></li>
+              <li><a href="#">order status</a></li>
+              <li><a href="#">payment options</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>online delivery</h4>
+            <ul>
+              <li><a href="#">Pizza</a></li>
+              <li><a href="#">Burger</a></li>
+              <li><a href="#">Subs</a></li>
+              <li><a href="#">drinks</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>follow us</h4>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contacts.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@700&family=Montserrat:wght@300&family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <section class="container">
+        <nav class="navbar">
+            <div class="content">
+              <div class="logo">
+                <img src="images/foodlogoo.png" alt="Food logo" />
+                <a href="/">Tasty Treats</a>
+              </div>
+              <ul class="menu-list">
+                <div class="icon cancel-btn">
+                  <i class="fa-solid fa-xmark"></i>
+                </div>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="menu.html" target="_blank">Menu</a></li>
+                <li><a href="order.html">Order Now</a></li>
+                <li><a href="contacts.html">Contacts</a></li>
+                <li><a href="#" onclick="openPopup()">Invite a Friend</a></li>
+                <div class="popup" id="popup" >
+                  <img src="images/404-tick.png">
+                  <h2>Hello&#128512</h2>
+                  <p>Invite all your friends now .<br> The link is below &#8595</p>
+                  <button type="button" onclick="closePopup()">Invite</button>
+              </div>
+              </ul>
+              <div class="icon menu-btn">
+                <i class="fa-solid fa-bars"></i>
+              </div>
+            </div>
+            <script>
+              let popup = document.getElementById("popup");
+            
+              const menu = document.querySelector(".menu-list");
+              const body = document.querySelector("body");
+              const navbar = document.querySelector(".navbar");
+              const menuBtn = document.querySelector(".menu-btn");
+              const cancelBtn = document.querySelector(".cancel-btn");
+      
+              menuBtn.onclick = () => {
+                menu.classList.add("active");
+                menuBtn.classList.add("hide");
+                body.classList.add("disabledScroll");
+              };
+              cancelBtn.onclick = () => {
+                menu.classList.remove("active");
+                menuBtn.classList.remove("hide");
+                body.classList.remove("disabledScroll");
+              };
+              function openPopup(){
+                  popup.classList.add("open-popup");
+              }
+              function closePopup(){
+                  popup.classList.remove("open-popup");
+              }
+            </script>
+          </nav>
+      <div class="preview">
+        <h2>Contact us</h2>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam cupiditate totam atque natus, minima ratione perspiciatis deleniti dolor
+          alias ex voluptatibus sed doloribus omnis, ipsam in obcaecati excepturi sint eveniet?
+        </p>
+      </div>
+      
+        <div class="leftside">
+            <form>
+              <h2>Send us a message!</h2>
+              <div class="inputarea">
+                <label for="name"><h3>Full name:</h3></label>
+                <input type="text" required="required" name="name" placeholder="Full Name" />
+              </div>
+              <div class="inputarea">
+                <label for="email"><h3>Email:</h3></label>
+                <input type="email" required="required" name="email" placeholder="Email" />
+              </div>
+              <div class="inputarea">
+                <label for="message"><h3>Message:</h3></label>
+                <input type="textarea" required="required" name="message" placeholder="Your message..." />
+               
+            </div>
+            <div class="submitarea">
+                <button type="submit">Send</button>
+              </div>  
+
+            </form>
+          </div>
+          
+      
+
+   
+    </section>
+    <div class="rightside">
+            <div class="row">
+                <div class="footer-col">
+                  <h4>email</h4>
+                  <ul>
+                    <li><i class="fa-solid fa-envelope"></i></li>
+                    <li><span href="mailto:itshardtech01@gmail.com">itshardtech01@gmail.com</span></li>
+                    
+                  </ul>
+                </div>
+                <div class="footer-col">
+                  <h4>Telephone</h4>
+                  <ul>
+                    <li><i class="fa-solid fa-phone"></i></li>
+                    <li><span>+255778947537</span></li>
+                    
+                  </ul>
+                </div>
+                <div class="footer-col">
+                  <h4>instagram</h4>
+                  <ul>
+                    <li><i class="fa-brands fa-instagram"></i></li>
+                    <li><a href="https://www.instagram.com/_m5_alfino/"><span>hardtech01</span></a></li>
+                   
+                  </ul>
+                </div>
+              
+              
+                <div class="footer-col">
+                  <h4>follow us</h4>
+                  <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                  </div>
+                </div>
+                <div class="location-col">
+                    <ul>  
+                    <li><h4>Location:</h4><li>
+                    <li> <iframe
+                            src="https://www.google.com/maps/embed?pb=+Zanzibar/@-6.1643579,39.187978,21z/data=!4m6!3m5!1s0x185cd05c893a1eb1:0x4df7f7089deef986!8m2!3d-6.1643622!4d39.1879099!16s%2Fg%2F11kfct1m2z?entry=ttu"
+                            width="70%"
+                            height="300"
+                            style="border: 0"
+                            allowfullscreen=""
+                            loading="lazy"
+                          ></iframe></li>
+                   
+                  </ul>
+                </div>
+          </div>
+          </div>
+  </body>
+</html>

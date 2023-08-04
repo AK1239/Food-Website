@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Place Your Order</title>
+    <link rel="stylesheet" href="order.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@700&family=Montserrat:wght@300&family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="content">
+        <div class="logo">
+          <img src="images/foodlogoo.png" alt="Food logo" />
+          <a href="/">Tasty Treats</a>
+        </div>
+        <ul class="menu-list">
+          <div class="icon cancel-btn">
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="menu.html" target="_blank">Menu</a></li>
+          <li><a href="order.html">Order Now</a></li>
+          <li><a href="contacts.html">Contacts</a></li>
+          <li><a href="#" onclick="openPopup()">Invite a Friend</a></li>
+          <div class="popup" id="popup">
+            <img src="images/404-tick.png" />
+            <!-- <h2>Hello&#128512</h2> -->
+            <!-- <p>Invite all your friends now .<br> The link is below &#8595</p> -->
+            <button type="button" onclick="closePopup()">Invite</button>
+          </div>
+        </ul>
+        <div class="icon menu-btn">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+      <script>
+        let popup = document.getElementById("popup");
+
+        const menu = document.querySelector(".menu-list");
+        const body = document.querySelector("body");
+        const navbar = document.querySelector(".navbar");
+        const menuBtn = document.querySelector(".menu-btn");
+        const cancelBtn = document.querySelector(".cancel-btn");
+
+        menuBtn.onclick = () => {
+          menu.classList.add("active");
+          menuBtn.classList.add("hide");
+          body.classList.add("disabledScroll");
+        };
+        cancelBtn.onclick = () => {
+          menu.classList.remove("active");
+          menuBtn.classList.remove("hide");
+          body.classList.remove("disabledScroll");
+        };
+        function openPopup() {
+          popup.classList.add("open-popup");
+        }
+        function closePopup() {
+          popup.classList.remove("open-popup");
+        }
+      </script>
+    </nav>
+    <section class="form">
+      <h2>Fast Home Delivery</h2>
+
+      <form action="">
+        <div class="inputbox">
+          <div class="input">
+            <span>Your Name</span>
+            <input type="text" placeholder="enter your name" />
+          </div>
+          <div class="input">
+            <span>Your Number</span>
+            <input type="number" placeholder="enter your Number" />
+          </div>
+        </div>
+        <div class="inputbox">
+          <div class="input">
+            <span>Your Order</span>
+            <input type="text" placeholder="place your order" />
+          </div>
+          <div class="input">
+            <span>how much</span>
+            <input type="number" placeholder="how many orders" />
+          </div>
+        </div>
+        <div class="inputbox">
+          <div class="input">
+            <span>Date and time</span>
+            <input type="datetime-local" />
+          </div>
+          <div class="input">
+            <span>Additional Food</span>
+            <input type="text" placeholder="Add any extra items" />
+          </div>
+        </div>
+        <div class="inputbox">
+          <div class="input">
+            <p>Your Address</p>
+            <textarea name="enter your address" id="" cols="70" rows="7"></textarea>
+          </div>
+          <div class="input">
+            <p>Your message</p>
+            <textarea name="enter your message" id="" cols="70" rows="7"></textarea>
+          </div>
+        </div>
+        <button type="submit" class="btn">Send</button>
+      </form>
+    </section>
+  </body>
+</html>
