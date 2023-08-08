@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>View our Menu</title>
+    <link rel="stylesheet" href="menu.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@700&family=Montserrat:wght@300&family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" href="images/foodlogoo.png" type="image/x-icon" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="content">
+        <div class="logo">
+          <img src="images/foodlogoo.png" alt="Food logo"/>
+          <a href="/">Tasty Treats</a>
+        </div>
+        <ul class="menu-list">
+          <div class="icon cancel-btn">
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="order.html">Order Now</a></li>
+          <li><a href="contacts.html">Contacts</a></li>
+          <li><a href="#" onclick="openPopup()">Invite a Friend</a></li>
+          <div class="popup" id="popup" >
+            <img src="images/404-tick.png">
+            <h2>Hello&#128512</h2>
+            <p>Invite all your friends now .<br> The link is below &#8595</p>
+            <button type="button" onclick="closePopup()">Invite</button>
+        </div>
+        </ul>
+        <div class="icon menu-btn">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+      <script>
+        let popup = document.getElementById("popup");
+      
+        const menu = document.querySelector(".menu-list");
+        const body = document.querySelector("body");
+        const navbar = document.querySelector(".navbar");
+        const menuBtn = document.querySelector(".menu-btn");
+        const cancelBtn = document.querySelector(".cancel-btn");
+
+        menuBtn.onclick = () => {
+          menu.classList.add("active");
+          menuBtn.classList.add("hide");
+          body.classList.add("disabledScroll");
+        };
+        cancelBtn.onclick = () => {
+          menu.classList.remove("active");
+          menuBtn.classList.remove("hide");
+          body.classList.remove("disabledScroll");
+        };
+        function openPopup(){
+            popup.classList.add("open-popup");
+        }
+        function closePopup(){
+            popup.classList.remove("open-popup");
+        }
+      </script>
+    </nav>
+    <h1>OUR MENU</h1>
+
+    <div class="food">
+      <h2>STARTERS</h2>
+      <hr />
+      <div class="main">
+        <div class="category">
+          <div><img src="images/tomatosoup.jpg" /></div>
+          <br />
+          <div>
+            <h3>TOMATO SOUP</h3>
+            <h3>$10.00</h3>
+          </div>
+        </div>
+
+        <div class="category">
+          <div><img src="images/chickensoup.jpg" /></div>
+          <div>
+            <h3>CHICKEN SOUP</h3>
+            <h3>$10.00</h3>
+          </div>
+        </div>
+
+        <div class="category">
+          <div><img src="images/cornsoup.jpg" /></div>
+          <div>
+            <h3>CORN SOUP</h3>
+            <h3>$10.00</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="food">
+      <h2>SALADS</h2>
+      <hr />
+      <div class="main">
+        <div class="category">
+          <div><img src="images/guacamole.jpg" /></div>
+          <div>
+            <h3>GUACAMOLE SALAD</h3>
+            <h3>$10.00</h3>
+          </div>
+        </div>
+
+        <div class="category">
+          <div><img src="images/chickensalad.jpg" /></div>
+          <div>
+            <h3>CHICKEN SALAD</h3>
+            <h3>$10.00</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="food">
+      <h2>MAIN COURSES</h2>
+      <hr />
+      <div class="main">
+        <div class="category">
+          <div><img src="images/food1.jpg" /></div>
+          <div>
+            <h3>GRILLED FISH AND POTATOES</h3>
+            <h3>$10.00</h3>
+          </div>
+        </div>
+
+        <div class="category">
+          <div><img src="images/food2.jpg" /></div>
+          <div>
+            <h3>CHICKEN AND RICE</h3>
+            <h3>$10.00</h3>
+          </div>
+        </div>
+        <div class="category">
+          <div><img src="images/food3.jpg" /></div>
+          <div>
+            <h3>TURKEY AND HAM PIE</h3>
+            <h3>$10.00</h3>
+          </div>
+        </div>
+        <div class="category">
+          <div><img src="images/food4.jpg" /></div>
+          <div>
+            <h3>VEGETABLE PASTA</h3>
+            <h3>$10.00</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="food">
+      <h2>DESSERTS</h2>
+      <hr />
+      <div class="main">
+        <div class="category">
+          <div><img src="images/fncream.jpg" /></div>
+          <div>
+            <h3>FRUIT AND CREAM</h3>
+            <h3>$10.00</h3>
+          </div>
+        </div>
+
+        <div class="category">
+          <div><img src="images/icecream.jpg" /></div>
+          <div>
+            <h3>ICECREAM</h3>
+            <h3>$10.00</h3>
+          </div>
+        </div>
+        <div class="category">
+          <div><img src="images/chocake.jpg" /></div>
+          <div>
+            <h3>CHOCOLATE CAKE</h3>
+            <h3>$10.00</h3>
+          </div>
+        </div>
+        <div class="category">
+          <div><img src="images/strcake.jpg" /></div>
+          <div>
+            <h3>STRAWBERRY CAKE</h3>
+            <h3>$10.00</h3>
+          </div>
+        </div>
+        <div class="category">
+          <div><img src="images/applepie.jpg" /></div>
+          <div>
+            <h3>APPLE PIE</h3>
+            <h3>$10.00</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="food">
+      <h2>DRINKS</h2>
+      <hr />
+      <div class="main">
+        <div class="category">
+          <div><img src="images/water.jpg" /></div>
+          <div>
+            <h3>MINERAL WATER</h3>
+            <h3>$2.00</h3>
+          </div>
+        </div>
+
+        <div class="category">
+          <div><img src="images/juice.jpg" /></div>
+          <div>
+            <h3>FRESH FRUIT JUICE</h3>
+            <h3>$2.00</h3>
+          </div>
+        </div>
+        <div class="category">
+          <div><img src="images/coffee.jpg" /></div>
+          <div>
+            <h3>COFFEE</h3>
+            <h3>$2.00</h3>
+          </div>
+        </div>
+        <div class="category">
+          <div><img src="images/tea.jpg" /></div>
+          <div>
+            <h3>TEA</h3>
+            <h3>$2.00</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
